@@ -8,10 +8,13 @@
 
 <section class="section has-background-dark">
 
-    
+    <div *ngIf="isShow" class="has-text-centered">
+        <img src="{{ filepath }}" alt="Factory">
+        <p class="has-text-white is-size-3 is-family-code">{{ answer }}</p>
+    </div>
 
     <div class="has-text-centered">
-        <a class="button is-primary is-medium mt-6" routerLink="/about">
+        <a class="button is-primary is-medium mt-6" (click)="spin()" (click)="toggleDisplay()">
             <span class="icon pl-3">
                 <i class="fa fa-refresh"></i>
             </span>

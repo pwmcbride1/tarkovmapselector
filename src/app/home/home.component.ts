@@ -1,3 +1,4 @@
+import { SplitInterpolation } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  answer: String | undefined;
+  filepath: String | undefined;
+  isShow = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleDisplay(){
+    console.log("Yikes");
+    this.isShow = !this.isShow;
   }
 
   getRandomInt(max: number){
@@ -17,35 +27,43 @@ export class HomeComponent implements OnInit {
   }
 
   spin(){
-    let result: Number;
+    let result: number;
     result = this.getRandomInt(6);
     console.log(result);
-    return result;
+    console.log(this.mapResult(result));
+    this.answer = this.mapResult(result);
+    console.log(this.answer);
   }
 
   mapResult(map: number){
     if(map == 0){
-      console.log("Factory");
+      this.filepath = "assets/images/Factory-Day_Banner.png"
+      console.log(this.filepath);
       return "Factory";
     }
     else if(map == 1){
-      console.log("Customs");
+      this.filepath = "assets/images/Customs_Banner.png"
+      console.log(this.filepath);
       return "Customs";
     }
     else if(map == 2){
-      console.log("Woods");
+      this.filepath = "assets/images/Banner_woods.png"
+      console.log(this.filepath);
       return "Woods";
     }
     else if(map == 3){
-      console.log("Interchange");
+      this.filepath = "assets/images/Banner_interchange.png"
+      console.log(this.filepath);
       return "Interchange";
     }
     else if(map == 4){
-      console.log("Labs");
+      this.filepath = "assets/images/TheLabBanner.png"
+      console.log(this.filepath);
       return "Labs";
     }
     else if(map == 5){
-      console.log("Reserve");
+      this.filepath = "assets/images/Reserve.png"
+      console.log(this.filepath);
       return "Reserve";
     }
     else{
