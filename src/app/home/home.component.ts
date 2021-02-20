@@ -19,7 +19,12 @@ export class HomeComponent implements OnInit {
 
   toggleDisplay(){
     console.log("Yikes");
-    this.isShow = !this.isShow;
+    if(this.isShow == false){
+      this.isShow = !this.isShow;
+    }
+    else{
+      
+    }
   }
 
   getRandomInt(max: number){
