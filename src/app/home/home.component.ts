@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   spin(){
     let result: number;
-    result = this.getRandomInt(6);
+    result = this.getRandomInt(7);
     console.log(result);
     console.log(this.mapResult(result));
     this.answer = this.mapResult(result);
@@ -75,6 +75,11 @@ export class HomeComponent implements OnInit {
       this.filepath = "assets/images/Reserve.png"
       console.log(this.filepath);
       return "Reserve";
+    }
+    else if(map == 6){
+      this.filepath = "assets/images/Banner_shoreline.png"
+      console.log(this.filepath);
+      return "Shoreline";
     }
     else{
       console.log("error");
