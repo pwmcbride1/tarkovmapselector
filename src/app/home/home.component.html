@@ -1,6 +1,6 @@
 <section class="hero is-dark">
     <div class="hero-body">
-        <h1 class="title has-text-centered mt-6 is-family-code">Tarkov Map Selector</h1>
+        <h1 class="title has-text-centered is-family-code">Tarkov Map Selector</h1>
         <p class="subtitle has-text-centered is-family-code">Click "Select" to begin</p>
     </div>
 </section>
@@ -8,19 +8,100 @@
 
 <section class="section has-background-dark">
 
-    
 
-    <div class="has-text-centered">
-        <img src="{{ filepath }}">
-        <p class="has-text-white is-size-3 is-family-code">{{ answer }}</p>
+    <div class="has-text-centered has-text-white is-size-3 is-family-code">
+        ||
     </div>
 
-    <div class="has-text-centered">
-        <a class="button is-primary is-medium mt-6" (click)="spin()" (click)="toggleDisplay()">
+    <!-- Temp image -->
+    <div class="has-text-centered" *ngIf="showTemp">
+        <img src="assets/images/escape-from-tarkov-logo.png" width="520">
+    </div>
+
+    <div class="has-text-centered" *ngIf="isShow">
+        <ngb-carousel [showNavigationArrows]="false"
+            [showNavigationIndicators]="false"
+            [pauseOnHover]="false"
+            [keyboard]="true"
+            [wrap]="true"
+            [interval]=1>
+            <ng-template ngbSlide id="slide1">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Factory
+                    </div>
+                    <img src="assets/images/Factory-Day_Banner.png">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide id="slide2">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Customs
+                    </div>
+                    <img src="assets/images/Customs_Banner.png">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide id="slide3">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Woods
+                    </div>
+                    <img src="assets/images/Banner_woods.png">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide id="slide4">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Shoreline
+                    </div>
+                    <img src="assets/images/Banner_shoreline.png">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide id="slide5">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Reserve
+                    </div>
+                    <img src="assets/images/Reserve.png">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide id="slide6">
+                <div class="picsum-img-wrapper">
+                    <div class="is-family-code has-text-white is-size-3">
+                        Labs
+                    </div>
+                    <img src="assets/images/TheLabBanner.png">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+
+    <div class="has-text-centered" *ngIf="!isShow">
+        <p class="has-text-white is-size-3 is-family-code">{{ answer }}</p>
+        <img src="{{ filepath }}">
+    </div>
+
+    <div class="has-text-centered has-text-white is-size-3 is-family-code">
+        ||
+    </div>
+
+
+    <div class="has-text-centered mt-2">
+        <a class="button is-inverted is-medium" (click)="toggleDisplay()" (click)="disableTempImg()"
+        (click)="enableStopButton()">
             <span class="icon pl-3">
                 <i class="fa fa-refresh"></i>
             </span>
             <span>Spin</span>
+        </a>
+    </div>
+
+    <div class="has-text-centered" *ngIf="showStopButton">
+        <a class="button is-primary is-medium mt-1" onsubmit="disable" (click)="spin()" (click)="toggleDisplay()">
+            <span class="icon pl-3">
+                <i class="fa fa-stop-circle-o"></i>
+            </span>
+            <span>Stop</span>
         </a>
     </div>
 </section>
@@ -163,6 +244,28 @@
             </p>
         </div>
 
+    </div>
+
+    <div class="row">
+        <div class="column has-text-centered">
+            <p class="has-text-centered has-text-white is-size-4 is-family-code">
+                Shoreline
+            </p>
+            <img src="assets/images/Banner_shoreline.png" alt="Shoreline">
+            <p><a class="button px-5 is-primary" href="https://escapefromtarkov.gamepedia.com/Shoreline">
+                <span class="icon">
+                    <i class="fa fa-wikipedia-w"></i>
+                </span>
+                <span>Shoreline Wiki</span>
+            </a>
+            <a class="button is-inverted px-6">
+                <span class="icon px-2">
+                    <i class="fa fa-star"></i>
+                </span>
+                <span>Favorite</span>
+            </a>
+            </p>
+        </div>
     </div>
 
 </section>

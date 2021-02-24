@@ -1,5 +1,6 @@
-import { SplitInterpolation } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,20 @@ export class HomeComponent implements OnInit {
   answer: String | undefined;
   filepath: String | undefined;
   isShow = false;
+  showTemp = true;
+  showStopButton = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  enableStopButton(){
+    this.showStopButton = true;
+  }
+
+  disableTempImg(){
+    this.showTemp = false;
   }
 
   toggleDisplay(){

@@ -8,17 +8,22 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PatchnotesComponent } from './patchnotes/patchnotes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    AboutComponent
+    AboutComponent,
+    PatchnotesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
