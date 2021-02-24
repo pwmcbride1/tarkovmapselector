@@ -4,13 +4,39 @@
         <img class="is-logo" src="assets/images/tarkovlogo.png" alt="logo" routerLink="/">
     </div>
     <div class="navbar-end">
+
         <span class="navbar-item pr-6">
             <a class="button is-inverted" routerLink="/about">
                 <span class="icon">
-                    <i class="fa fa-list-ul"></i>
+                    <i class="fa fa-pencil-square-o"></i>
                 </span>
                 <span>About</span>
             </a>
         </span>
+
+        <div class="navbar-item has-dropdown is-hoverable pr-6">
+            <a class="navbar-link">
+                <i class="fa fa-navicon"></i>
+            </a>
+            <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                    Account
+                </a>
+                <a class="navbar-item">
+                    Favorites
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" routerLink="/">
+                    Home
+                </a>
+                <a class="navbar-item" routerLink="/about">
+                    About
+                </a>
+                <a class="navbar-item" routerLink="/patchnotes">
+                    Patch Notes
+                </a>
+            </div>
+        </div>
+
     </div>
 </nav>
