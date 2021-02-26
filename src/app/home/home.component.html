@@ -24,7 +24,7 @@
             [pauseOnHover]="false"
             [keyboard]="true"
             [wrap]="true"
-            [interval]=1>
+            [interval]="myInterval">
             <ng-template ngbSlide id="slide1">
                 <div class="picsum-img-wrapper">
                     <div class="is-family-code has-text-white is-size-3">
@@ -87,21 +87,12 @@
 
 
     <div class="has-text-centered mt-2">
-        <a class="button is-inverted is-medium" (click)="toggleDisplay()" (click)="disableTempImg()"
+        <a class="button is-inverted is-medium" (click)="toggleDisplay()" (click)="spin()" (click)="disableTempImg()"
         (click)="enableStopButton()">
             <span class="icon pl-3">
                 <i class="fa fa-refresh"></i>
             </span>
             <span>Spin</span>
-        </a>
-    </div>
-
-    <div class="has-text-centered" *ngIf="showStopButton">
-        <a class="button is-primary is-medium mt-1" onsubmit="disable" (click)="spin()" (click)="toggleDisplay()">
-            <span class="icon pl-3">
-                <i class="fa fa-stop-circle-o"></i>
-            </span>
-            <span>Stop</span>
         </a>
     </div>
 </section>

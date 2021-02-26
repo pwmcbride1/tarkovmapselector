@@ -9,6 +9,8 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  myInterval = 100;
+
   answer: String | undefined;
   filepath: String | undefined;
   isShow = false;
@@ -39,10 +41,11 @@ export class HomeComponent implements OnInit {
   spin(){
     let result: number;
     result = this.getRandomInt(7);
-    console.log(result);
-    console.log(this.mapResult(result));
     this.answer = this.mapResult(result);
     console.log(this.answer);
+
+    // Timeout to allow animation to play
+    setTimeout(() => this.toggleDisplay(), 4500);
   }
 
   mapResult(map: number){
