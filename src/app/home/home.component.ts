@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
     console.log(this.answer);
 
     // Timeout to allow animation to play
-    setTimeout(() => this.toggleDisplay(), 4500);
+    setTimeout(() => this.toggleDisplay(), 4400);
   }
 
   mapResult(map: number){
