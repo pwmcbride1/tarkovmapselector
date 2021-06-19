@@ -1,5 +1,6 @@
 //Install express server
 const express = require('express');
+const path = require('path');
 
 // new variables added
 const  bodyParser = require('body-parser');
@@ -11,6 +12,7 @@ const app = express();
 const db = require('./models');
 const Role = db.role;
 
+app.use(express.static(__dirname + '/dist/tarkovmapselector'));
 
 db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/tarkovUsers?retryWrites=true&w=majority' ,{
     useNewUrlParser: true,
@@ -49,8 +51,8 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 
-app.get("/", function(req, res){
-    return res.sendFile(path.join(__dirname + '/index.html'));
+app.get("/*", function(req, res){
+    res.sendFile(path.join(__dirname + '/dist/tarkovmapselector/index.html'));
 });
 
 // routes
