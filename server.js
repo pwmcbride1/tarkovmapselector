@@ -47,9 +47,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content type application/json
 app.use(bodyParser.json());
 
+/*
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-
+*/
 
 app.get("/*", function(req, res){
     res.sendFile(path.join(__dirname + '/dist/tarkovmapselector/index.html'));
