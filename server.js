@@ -50,10 +50,11 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-
+/*
 app.get("/", function(req, res){
     return res.json({ message: "Welcome to Tarkov Map Simulator" });
 });
+*/
 
 // routes
 require('./routes/auth.routes')(app);
