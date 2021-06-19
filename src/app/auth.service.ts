@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 // route will need changed when working locally and live version
-const AUTH_API = 'http://tarkovmapselector.herokuapp.com:8081/api/auth/';
+const AUTH_API = 'http://localhost:8080/api/auth/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
