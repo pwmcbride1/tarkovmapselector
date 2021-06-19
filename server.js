@@ -11,7 +11,7 @@ const app = express();
 const db = require('./models');
 const Role = db.role;
 
-/*
+
 db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/tarkovUsers?retryWrites=true&w=majority' ,{
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -24,7 +24,6 @@ db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/
     console.error("Connection error", err);
     process.exit();
 });
-*/
 
 
 //var authentication = require('/routes/authenticate');
