@@ -3,7 +3,6 @@ const express = require('express');
 
 // new variables added
 const  bodyParser = require('body-parser');
-const Bcrypt = require('bcryptjs');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 
@@ -50,11 +49,10 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-/*
+
 app.get("/", function(req, res){
-    return res.json({ message: "Welcome to Tarkov Map Simulator" });
+    return res.sendFile(path.join(__dirname + '/index.html'));
 });
-*/
 
 // routes
 require('./routes/auth.routes')(app);
