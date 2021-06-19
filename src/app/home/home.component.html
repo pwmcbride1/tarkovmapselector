@@ -1,7 +1,7 @@
 <section class="hero is-dark">
     <div class="hero-body">
         <h1 class="title has-text-centered is-family-code">Tarkov Map Selector</h1>
-        <p class="subtitle has-text-centered is-family-code">Click "Select" to begin</p>
+        <p class="subtitle has-text-centered is-family-code">Click "Spin" to begin</p>
     </div>
 </section>
 
@@ -118,7 +118,7 @@
                 </span>
                 <span>Factory Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addFactory()">
                 <span class="icon px-3">
                     <i class="fa fa-star"></i>
                 </span>
@@ -137,7 +137,7 @@
                 </span>
                 <span>Customs Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addCustoms()">
                 <span class="icon">
                     <i class="fa fa-star"></i>
                 </span>
@@ -156,7 +156,7 @@
                 </span>
                 <span>Woods Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addWoods()">
                 <span class="icon px-3">
                     <i class="fa fa-star"></i>
                 </span>
@@ -178,7 +178,7 @@
                 </span>
                 <span>Interchange Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addInterchange()">
                 <span class="icon px-4">
                     <i class="fa fa-star"></i>
                 </span>
@@ -197,7 +197,7 @@
                 </span>
                 <span>The Lab Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addLabs()">
                 <span class="icon px-2">
                     <i class="fa fa-star"></i>
                 </span>
@@ -216,7 +216,7 @@
                 </span>
                 <span>Reserve Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addReserve()">
                 <span class="icon px-2">
                     <i class="fa fa-star"></i>
                 </span>
@@ -226,6 +226,9 @@
         </div>
     </div>
     <div class="columns is-mobile has-text-centered has-text-white">
+        <div class="column">
+
+        </div>
         <div class="column">
             <p class="has-text-centered has-text-white is-size-3 is-family-code">
                 Shoreline
@@ -237,13 +240,16 @@
                 </span>
                 <span>Shoreline Wiki</span>
             </a>
-            <a class="button is-inverted px-6">
+            <a class="button is-inverted px-6" (click)="addShoreline()">
                 <span class="icon px-2">
                     <i class="fa fa-star"></i>
                 </span>
                 <span>Favorite</span>
             </a>
             </p>
+        </div>
+        <div class="column">
+
         </div>
     </div>
 

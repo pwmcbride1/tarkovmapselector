@@ -1,0 +1,49 @@
+<section class="section has-text-centered has-background-dark has-text-white">
+
+
+    <form class="form-login has-text-centered" #loginForm="ngForm" (ngSubmit)="submitForm()">
+        <p class="is-size-2 has-text-white">
+            Login
+        </p>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input form-control" type="text" name="Username" id="Username" placeholder="Username" [(ngModel)]="Username" 
+                #usernameInput="ngModel" required>
+                    <span class="icon is-small is-left">
+                    <i class="fa fa-user"></i>
+                </span>
+            </p>
+            <div class="help is-error" *ngIf="usernameInput.invalid && usernameInput.touched">
+                Username is required!
+            </div>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input form-control" type="password" name="Password" id="passwordinput" placeholder="Password"
+                [(ngModel)]="Password" #passwordInput="ngModel" required>
+                    <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                </span>
+            </p>
+            <div class="help is-error" *ngIf="passwordInput.invalid && passwordInput.touched">
+                Password invalid!
+            </div>
+        </div>
+
+            <input class="mb-3" type="checkbox"> Remember me
+        <div class="field">
+            <p class="control">
+                <button class="button is-success" type="submit" [disabled]="loginForm.invalid">
+                    Login
+                </button>
+            </p>
+        </div>
+
+        <div>
+            <p>Don't have an account? Register <a routerLink="/register">here</a></p>
+        </div>
+
+    </form>
+
+
+</section>

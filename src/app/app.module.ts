@@ -10,6 +10,12 @@ import { AboutComponent } from './about/about.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PatchnotesComponent } from './patchnotes/patchnotes.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountDashboardComponent } from './account-dashboard/account-dashboard.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +24,18 @@ import { PatchnotesComponent } from './patchnotes/patchnotes.component';
     FooterComponent,
     HeaderComponent,
     AboutComponent,
-    PatchnotesComponent
+    PatchnotesComponent,
+    LoginComponent,
+    RegisterComponent,
+    AccountDashboardComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

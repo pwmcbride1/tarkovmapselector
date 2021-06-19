@@ -1,3 +1,7 @@
+import { FavoritesComponent } from './favorites/favorites.component';
+import { AccountDashboardComponent } from './account-dashboard/account-dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 import { PatchnotesComponent } from './patchnotes/patchnotes.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +21,22 @@ const routes: Routes = [
   {
     path: 'patchnotes',
     component: PatchnotesComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'accountDashboard',
+    component: AccountDashboardComponent
+  },
+  {
+    path: 'favorites',
+    component: FavoritesComponent
   }
 ];
 

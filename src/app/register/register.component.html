@@ -1,0 +1,61 @@
+<section class="section has-text-centered has-text-white has-background-dark">
+    
+    <form  class="register-form has-text-centered" method="POST" #registerForm="ngForm" (ngSubmit)="registerUser($event)">
+        <p class="is-size-2 has-text-white">Register</p>
+        <p class="has-text-white">Register for a new account below</p>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input form-control" type="text" name="Username" id="Username" placeholder="Username" 
+                [(ngModel)]="Username" #usernameInput="ngModel" required>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-user"></i>
+                </span>
+            </p>
+            <div class="help is-error" *ngIf="usernameInput.invalid && usernameInput.touched">
+                Username is required!
+            </div>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input form-control" type="password" name="Password" id="Password" placeholder="Password" 
+                [(ngModel)]="Password" #passwordInput="ngModel" required>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                </span>
+            </p>
+            <div class="help is-error" *ngIf="passwordInput.invalid && passwordInput.touched">
+                Password is required!
+            </div>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input form-control" type="password" name="ConfirmPass" id="ConfirmPass" placeholder="Confirm Password"
+                [(ngModel)]="ConfirmPass" #confirmPassInput="ngModel" required>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-check"></i>
+                </span>
+            </p>
+            <div class="help is-error" *ngIf="confirmPassInput.invalid && confirmPassInput.touched">
+                You must confirm your password!
+            </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LebWHMaAAAAANB7pdWU5Pewo5-yArUzM4lHH6w5"></div>
+        <div class="field">
+            <p class="control">
+                <button class="button is-success" type="submit" [disabled]="registerForm.invalid">
+                    Register
+                </button>
+            </p>
+        </div>
+    </form>
+    <p class="has-text-white">Already have an account? Login <a routerLink="/login">here</a></p>
+
+    <br>
+
+    <p class="is-size-3 has-text-white mt-6">Why Create an Account?</p>
+    <p class="is-size-6 has-text-white px-6">Creating an account will allow you to favorite different maps, affecting
+        the probability of that map being selected. Having an account will also allow you to view other stats like 
+        number of spins, list of favorite maps and number of times a certain map was selected. Creating an account
+        is also free and doesn't require an email.
+    </p>
+</section>

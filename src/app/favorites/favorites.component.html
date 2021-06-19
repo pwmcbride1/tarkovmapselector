@@ -1,0 +1,101 @@
+<section class="hero is-dark">
+    <div class="hero-body">
+        <h1 class="title has-text-centered">Favorites</h1>
+    </div>
+
+    <div class="has-text-centered is-family-code is-size-3" *ngIf="hasNoFavorites">
+        You have no favorited maps
+    </div>
+
+    <div class="has-text-centered is-family-code is-size-6 mt-4" *ngIf="hasNoFavorites">
+        Any map you favorite will be displayed here
+    </div>
+
+    <div class="has-text-centered is-family-code is-size-6">
+        You can add maps to your favorites on the home screen
+        <p><a class="button is-small is-primary" routerLink="/">
+            <span class="icon">
+                <i class="fa fa-home"></i>
+            </span>
+            <span>Home</span>
+        </a></p>
+    </div>
+
+    <section class="section has-background-dark has-text-centered">
+        <div class="is=size-6">
+            <div class="columns px-6 is-gapless">
+                <div class="column" *ngIf="showFactory">
+                    <p class="is-size-6 is-family-code">Factory</p>
+                    <img src="assets/images/Factory-Day_Banner.png" alt="Factory">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeFactory()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showCustoms">
+                    <p class="is-size-6 is-family-code">Customs</p>
+                    <img src="assets/images/Customs_Banner.png" alt="Customes">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeCustoms()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showWoods">
+                    <p class="is-size-6 is-family-code">Woods</p>
+                    <img src="assets/images/Banner_woods.png" alt="Woods">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeWoods()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showInterchange">
+                    <p class="is-size-6 is-family-code">Interchange</p>
+                    <img src="assets/images/Banner_interchange.png" alt="Interchange">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeInterchange()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showLab">
+                    <p class="is-size-6 is-family-code">Labs</p>
+                    <img src="assets/images/TheLabBanner.png" alt="Labs">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeLabs()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showReserve">
+                    <p class="is-size-6 is-family-code">Reserve</p>
+                    <img src="assets/images/Reserve.png" alt="Reserve">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeReserve()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+                <div class="column" *ngIf="showShoreline">
+                    <p class="is-size-6 is-family-code">Shoreline</p>
+                    <img src="assets/images/Banner_shoreline.png" alt="Shoreline">
+                    <p><a class="button is-danger is-small mt-2" (click)="removeShoreline()">
+                        <span class="icon">
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        <span>Remove</span>
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
