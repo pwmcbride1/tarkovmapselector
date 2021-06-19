@@ -12,6 +12,8 @@ const app = express();
 const db = require('./models');
 const Role = db.role;
 
+app.use(express.static(__dirname + '/dist/tarkovmapselector'));
+
 db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/tarkovUsers?retryWrites=true&w=majority' ,{
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -59,8 +61,7 @@ app.get("/*", function(req, res){
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 
-app.use(express.static(__dirname + '/dist/tarkovmapselector'));
-
+app.use(cookieParser());
 
 // Start the app by listening on the default Heroku port
 
