@@ -30,7 +30,7 @@ db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/
 
 //var authentication = require('/routes/authenticate');
 
-
+/*
 const cors = require('cors');
 
 var corsOptions = {
@@ -40,6 +40,8 @@ var corsOptions = {
 }
 
 app.use(cors());
+*/
+
 
 // parse requests of content type application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
