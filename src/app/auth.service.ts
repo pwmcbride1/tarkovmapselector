@@ -1,6 +1,6 @@
 import {  Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 // route will need changed when working locally and live version
 const AUTH_API = 'http://tarkovmapselector.herokuapp.com/api/auth/';
