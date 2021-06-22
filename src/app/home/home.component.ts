@@ -1,7 +1,7 @@
 import { AuthService } from './../auth.service';
 import { TokenStorageService } from './../token-storage.service';
 
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, enableProdMode } from '@angular/core';
 
 @Component({
   selector: 'app-home',

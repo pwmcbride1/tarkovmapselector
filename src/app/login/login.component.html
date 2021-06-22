@@ -1,3 +1,5 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <section class="section has-text-centered has-background-dark has-text-white">
 
 
@@ -38,7 +40,9 @@
                 </button>
             </p>
         </div>
-
+        <div class="has-text-centered">
+            <div class="g-recaptcha" data-sitekey="6LebWHMaAAAAANB7pdWU5Pewo5-yArUzM4lHH6w5" ng-model="recaptch"></div>
+        </div>
         <div>
             <p>Don't have an account? Register <a routerLink="/register">here</a></p>
         </div>
