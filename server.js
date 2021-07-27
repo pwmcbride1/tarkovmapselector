@@ -12,6 +12,12 @@ const app = express();
 const db = require('./models');
 const Role = db.role;
 
+// attempt to fix cors errors 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+})
+
 app.use(express.static(__dirname + '/dist/tarkovmapselector'));
 
 db.mongoose.connect('mongodb+srv://pwmcbrid:out72put@cluster0.lz331.mongodb.net/tarkovUsers?retryWrites=true&w=majority' ,{
